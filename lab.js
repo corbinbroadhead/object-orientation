@@ -209,6 +209,21 @@ console.log(shadow.name);
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+
+castSpell() {
+  console.log(`${this.name} has cast ${this.favoriteSpell}.`);
+  }
+}
+
+let nithus = new Wizard('Nithus', 173, 'Llama Morphing');
+
+nithus.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -234,7 +249,23 @@ console.log(shadow.name);
 */
 
 //Code Here
-
+class Phone {
+  constructor(brand, model, storage, color, price, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage; 
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+  sell() {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`);
+  }
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+}
   
 /*
     Next make three new phone instances using your class.
@@ -247,6 +278,9 @@ console.log(shadow.name);
 */
 
 //Code Here
+let phone1 = new Phone('Apple', 'iPhone X', 256, 'Space Gray', 399.99);
+let phone2 = new Phone('Apple', 'iPhone X', 64, 'Rose', 199.99);
+let phone3 = new Phone('Samsung', 'Galaxy SE', 128, 'Black', 399.99);
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -256,7 +290,8 @@ console.log(shadow.name);
 */ 
 
 //Code Here 
-
+phone1.changePrice(299.99);
+console.log(phone1);
 
 /*
   Now call the sell method on one of your other phone objects
@@ -265,7 +300,8 @@ console.log(shadow.name);
 */
 
 //Code Here 
-
+phone2.sell()
+console.log(phone2.sold);
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
