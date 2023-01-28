@@ -5,8 +5,10 @@
 */
 
 //Code here
-
-
+const me = { 
+  name: 'Corbin',
+  age: 20,
+} 
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -16,21 +18,26 @@
 //and goodBoy/goodGirl (a boolean).
 
 //Code here
-
+const dog = {
+  name: 'Ollie',
+  color: 'Brown/Black/White',
+  age: 9,
+  goodBoy: true,
+}
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
 //Code here
-
+console.log(dog.name);
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
 //Code here
-
+console.log(dog['color']);
 
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
@@ -40,14 +47,22 @@
 */
 
 //Code here
-
+const favoriteThings = {
+  band: 'Live',
+  food: 'Pasta',
+  person: 'Dani',
+  book: 'Galatians',
+  movie: 'The Fifth Element',
+  holiday: 'Easter',
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
-
+favoriteThings.car = '1999 Pontiac Grand Am';
+favoriteThings['show'] = 'Seinfeld';
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
@@ -55,6 +70,8 @@
 */
 
 //Code here
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -73,7 +90,7 @@ var carDetails = {
 */
 
 //Code Here
-
+let {color, make, model, year} = carDetails;
 
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
@@ -86,7 +103,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -105,8 +122,17 @@ function greeting( obj ) {
 */
 
 //Code Here
+function totalPopulation ( obj ) {
+  const {utah, california, texas, arizona} = obj;
+  return utah + california + texas + arizona;
+}
 
-
+const population = {
+  utah: 3400000,
+  california: 39000000,
+  texas: 30000000,
+  arizona: 7400000
+}
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -119,7 +145,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function ingredients(obj) {
+  const {carb, fat, protein} = obj;
+  return [carb, fat, protein]; 
+}
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -141,7 +170,8 @@ var user = {
 */
 
 //Code Here
-
+user.name = 'Bryan G. Smith';
+user.email = 'bryan.smith@devmounta.in';
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -149,7 +179,7 @@ var user = {
 */
 
 //Code Here
-
+delete user.age;
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -159,8 +189,16 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
-
+let shadow = new Cat('Shadow', 5, 'Black');
+console.log(shadow.name);
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
